@@ -4,7 +4,7 @@ import { View } from 'react-native';
 
 const App: React.FC = () => (
   <NavigationContainer>
-    <View></View>
+    <View />
   </NavigationContainer>
 );
 
