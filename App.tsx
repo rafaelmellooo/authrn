@@ -1,11 +1,17 @@
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
-const App: React.FC = () => (
-  <NavigationContainer>
-    <View />
-  </NavigationContainer>
-);
+import { AuthProvider } from './src/contexts/auth';
+import Routes from './src/routes';
+
+const App: React.FC = () => {
+  return (
+    <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
+  );
+};
 
 export default App;

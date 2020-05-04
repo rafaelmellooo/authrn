@@ -1,4 +1,12 @@
-async function signIn() {
+type Response = {
+  token: string;
+  user: {
+    name: string;
+    email: string;
+  };
+};
+
+export async function signIn(): Promise<Response> {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
@@ -12,5 +20,3 @@ async function signIn() {
     }, 2000);
   });
 }
-
-export default signIn;
